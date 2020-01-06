@@ -1,0 +1,80 @@
+.related-posts {
+  background: $beige;
+  min-height: 90vh;
+}
+
+.posts-container {
+  width: 90%;
+  margin: auto;
+  padding: 2% 0% 8%;
+
+  @media screen and (max-width: 997px) {
+    padding-bottom: 15%;
+  }
+
+  .posts-heading {
+    @include font($font-family-cormorant, 400, 7vw);
+    color: $blog-blue;
+    padding: 1% 0% 4%;
+
+    @media screen and (max-width: 768px) {
+      margin: 2rem 0rem 1rem 12%;
+    }
+  }
+
+  .posts-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+
+    // Have posts in one column in a row
+    @media screen and (max-width: 768px) {
+      grid-template-columns: repeat(1, 1fr);
+      align-items: center;
+      margin: auto;
+      width: 75%;
+    }
+
+    .posts-card-content {
+      background: $universal-white;
+    }
+
+    .date {
+      @include font($font-family-montserrat, 400, 15px);
+      color: $blog-blue;
+      padding: 2rem 4.5rem 1rem 2rem;
+    }
+
+    .posts-card-heading {
+      @include font($font-family-montserrat, 500, 35px);
+      color: $orange;
+      padding: 0.5rem 0rem 0rem 2rem;
+    }
+
+    .posts-card-text {
+      @include font($font-family-montserrat, 400, 15px);
+      color: $blog-blue;
+      line-height: 1.6;
+      padding: 1rem 4.5rem 1.5rem 2rem;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    button {
+      @include font($font-family-montserrat, 500, 15px);
+      padding: 1rem 2rem;
+      margin: 0rem 4.5rem 2rem 2rem;
+      color: $blog-blue;
+      background: white;
+      border: 1px solid rgb(221, 97, 15);
+      cursor: pointer;
+      transition-duration: 0.2s;
+      &:hover {
+        background: rgb(221, 97, 15);
+        color: $universal-white;
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+// Font Family Variables
+$font-family-cormorant: "Cormorant Garamond", serif;
+$font-family-montserrat: "Montserrat", sans-serif;
+
+// Font Size Variables
+$primary-heading: 7vw; // For Heading of Blog / Tech Challenge Heading
+$med-heading: 45px; // For "Juno Tech Test" card headings
+$nav-footer-links: 24px; // For Nav & Footer links
+$footer-headings: 30px; //For footer headings
+$body-text: 20px; // For Body text and dates
+$buttons: 22px; // For Buttons
+
+// Font Color Variables
+$blog-blue: #4a455c; // For blog cards and footer mailing list
+$one-card-blue: #7c7d98; // For one card in "Blog" section
+$orange: #d64c31; // For "Tech Challenge" heading and footer
+$universal-white: #ffffff; // For background and text where it's white
+$beige: #fff0e7; // For "Related Post" section
+
+@mixin flex($justify, $align, $direction) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+@mixin font($family, $weight, $size) {
+  font-family: $family;
+  font-weight: $weight;
+  font-size: $size;
+}

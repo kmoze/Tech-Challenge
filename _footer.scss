@@ -1,0 +1,171 @@
+.footer {
+  background: $orange;
+  min-height: 45vh;
+  position: relative;
+
+  @media screen and (max-width: 768px) {
+    padding-bottom: 5rem;
+  }
+}
+
+.footer-container {
+  width: 90%;
+  margin: auto;
+  padding-top: 5rem;
+
+  .footer-heading {
+    padding: 1.5rem 0rem 0.5rem;
+    @include font($font-family-montserrat, 500, 30px);
+    color: $universal-white;
+  }
+
+  .footer-text {
+    width: 40%;
+    padding: 0rem 0rem 0.5rem;
+    @include font($font-family-montserrat, 400, 18px);
+    color: $universal-white;
+  }
+
+  .nav-links {
+    @include flex(left, center, row);
+    list-style: none;
+    padding: 1rem 0rem 1rem;
+
+    @media screen and (max-width: 829px) {
+      @include flex(space-between, flex-start, column);
+    }
+
+    @media screen and (max-width: 909px) {
+      li {
+        margin-bottom: 1rem;
+      }
+    }
+
+    a {
+      margin-right: 2rem;
+      text-decoration: none;
+      color: $universal-white;
+      @include font($font-family-montserrat, 400, 20px);
+    }
+  }
+  .copyright {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    @include font($font-family-montserrat, 500, 15px);
+    color: $universal-white;
+  }
+}
+
+.mailing-list {
+  position: absolute;
+  top: -20%;
+  right: 5%;
+  width: 35%;
+  height: 120%;
+  background: $blog-blue;
+
+  @media screen and (max-width: 768px) {
+    position: relative;
+    right: 0%;
+    margin: -3rem auto 0rem;
+    height: 60%;
+    width: 70%;
+    border-radius: 10px;
+  }
+
+  @media screen and (max-width: 505px) {
+    height: 55%;
+  }
+
+  .mail-card-container {
+    width: 75%;
+    margin: 6rem auto 0rem;
+    // padding: 3rem 0rem; // Change T/B padd
+    @media screen and (max-width: 768px) {
+      padding-top: 2rem;
+    }
+
+    @media screen and (max-width: 505px) {
+      padding-top: 3rem;
+    }
+
+    .mailing-list-header {
+      @include font($font-family-montserrat, 500, $footer-headings - 3px);
+      color: $universal-white;
+      padding: 0rem 0rem 1rem;
+
+      @media screen and (max-width: 768px) {
+        margin-top: 10%;
+        font-size: 3.5vw;
+      }
+    }
+
+    .email-input {
+      width: 100%;
+      padding: 1rem;
+      font-size: 1.5vw;
+      border: none;
+      border-radius: 5px;
+
+      @media screen and (max-width: 768px) {
+        width: 75%;
+      }
+    }
+
+    button {
+      padding: 0.8rem 1.2rem;
+      border: none;
+      border-radius: 2px;
+      background: rgb(238, 204, 172);
+      color: black;
+      font-size: $buttons - 6px;
+      margin: 1rem 0rem;
+      cursor: pointer;
+      transition-duration: 0.2s;
+      &:hover {
+        // background: rgb(247, 227, 203);
+        background: $beige;
+      }
+
+      @media screen and (max-width: 768px) {
+        font-size: 2.5vw;
+      }
+    }
+
+    .mailing-list-text {
+      @include font($font-family-montserrat, 400, 1.4vw);
+      color: $universal-white;
+      padding: 0rem 0rem 1.5rem;
+      line-height: 1.6;
+
+      @media screen and (max-width: 768px) {
+        font-size: 2vw;
+      }
+    }
+
+    .fab-container {
+      @media screen and (max-width: 900px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2rem;
+      }
+
+      @media screen and (max-width: 768px) {
+        @include flex(space-around, flex-start, row);
+      }
+    }
+
+    .fab {
+      cursor: pointer;
+      margin-right: 1.8rem;
+      color: white;
+      &:hover {
+        color: $beige;
+      }
+
+      @media screen and (max-width: 909px) {
+        font-size: 3vw;
+      }
+    }
+  }
+}

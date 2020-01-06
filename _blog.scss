@@ -1,0 +1,110 @@
+.blog {
+  // background: red;
+  margin: 15% auto 5%;
+  width: 90%;
+  min-height: 100vh;
+  h2 {
+    @include font($font-family-cormorant, 400, 7vw);
+    color: $blog-blue;
+  }
+  .blog-heading {
+    @media screen and (max-width: 768px) {
+      margin: 0rem 0rem 2rem 12%;
+    }
+  }
+}
+
+.img-2 {
+  grid-area: img-2;
+}
+
+.img-3 {
+  grid-area: img-3;
+}
+
+.img-4 {
+  grid-area: stretch-article;
+}
+
+.img-5 {
+  grid-area: stretch-img;
+}
+
+.cards {
+  font-size: 0;
+  margin-top: 2.5%;
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-areas:
+    "img-2 img-3 stretch-article"
+    "stretch-img stretch-img stretch-article";
+
+  @media screen and (max-width: 768px) {
+    grid-template-areas:
+      "img-2"
+      "img-3"
+      "stretch-article"
+      "stretch-img";
+    align-items: center;
+    margin: auto;
+    width: 75%;
+  }
+
+  .date {
+    @include font($font-family-montserrat, 400, 15px);
+    color: $beige;
+    padding: 2rem 4.5rem 1rem 2rem;
+  }
+
+  .card-text {
+    @include font($font-family-montserrat, 400, 15px);
+    color: $universal-white;
+    line-height: 1.6;
+    padding: 1rem 4.5rem 1.5rem 2rem;
+  }
+
+  .card-heading {
+    @include font($font-family-montserrat, 500, 35px);
+    color: $universal-white;
+    padding: 0.5rem 0rem 0rem 2rem;
+  }
+
+  .stretch-article-content {
+    background: $one-card-blue;
+  }
+
+  .card-content {
+    // border: 5px solid $blog-blue;
+    background: $blog-blue;
+    padding: 4px;
+  }
+
+  .stretch-article-heading {
+    @include font($font-family-montserrat, 500, 35px);
+    color: $beige;
+    padding: 2rem 4.5rem 0.5rem 2rem;
+  }
+
+  h2,
+  p {
+    color: $universal-white;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  button {
+    @include font($font-family-montserrat, 500, 15px);
+    padding: 1rem 2rem;
+    margin: 0rem 4.5rem 2rem 2rem;
+    color: $universal-white;
+    background: rgb(221, 97, 15);
+    border: none;
+    cursor: pointer;
+    transition-duration: 0.2s;
+    &:hover {
+      background: rgb(179, 72, 0);
+    }
+  }
+}

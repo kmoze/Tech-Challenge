@@ -1,0 +1,55 @@
+// Header & Nav section styling
+
+.nav-header {
+  width: 65%;
+  margin: 2.5rem 3rem 1rem;
+}
+
+nav {
+  @include flex(center, center, row);
+  flex-wrap: wrap;
+
+  .logo img {
+    width: 25vw;
+    cursor: pointer;
+  }
+
+  .list,
+  .logo {
+    flex: 1 1 20rem;
+  }
+
+  .nav-links {
+    @include flex(space-between, center, row);
+    list-style: none;
+    // margin-left: 1rem;
+
+    @media screen and (max-width: 985px) {
+      margin-top: 2rem;
+      margin-right: 4rem;
+    }
+
+    @media screen and (max-width: 600px) {
+      @include flex(space-between, flex-start, column);
+      // margin-bottom: 3rem;
+    }
+
+    @media screen and (max-width: 600px) {
+      li {
+        margin-bottom: 1rem;
+      }
+    }
+
+    a {
+      @include font($font-family-montserrat, 400, 18px);
+      text-decoration: none;
+      color: $blog-blue;
+      &:hover {
+        color: $one-card-blue;
+        // text-decoration: underline;
+        border-bottom: 1px solid $orange;
+        padding-bottom: 5px;
+      }
+    }
+  }
+}

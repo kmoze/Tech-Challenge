@@ -1,0 +1,26 @@
+// Resetting global styles
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  html,
+  body {
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+  }
+}
+
+// Importing Variables File
+@import "variables";
+// Header of Webpage
+@import "header";
+// Import Hero section
+@import "hero";
+// Import Blog section
+@import "blog";
+// Import Related Posts section
+@import "posts";
+// Import Footer section
+@import "footer";
